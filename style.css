@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis. com/css?family=Poppins:100, 200, 300, 400, 500, 600, 700, 800, 900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 825px;
+    min-height: 100vh;
+    background-color: black;
+    background-image: url("photos/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.frame {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 780px;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 4px solid;
+    border-color: #132E32;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 45px;
+}
+
+/* Navigational Bar */
+.nav-bar {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 25px;
+    height: 35px;
+    width: 90%;
+    border-radius: 90px;
+}
+
+.nav-bar .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #1E264C;
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+    width: 50%;
+    height: 100%;
+    border-radius: 90px;
+    cursor: pointer;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.nav-bar ul li {
+    cursor: pointer;
+}
+
+/* Two pages */
+.projects-page,
+.experience-page {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 545;
+}
+
+/* Main Page */
+.home-page {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    width: 100%;
+}
+
+.home-page .image {
+    width: 172px;
+    height: 172px;
+    border-radius: 90px;
+    overflow: hidden;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.home-page .image img {
+    position: relative;
+    transform: scale(0.5);
+    left: -125%;
+    top: -280%;
+    filter: grayscale(55%);
+}
+
+.home-page .me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.home-page .me .info {
+    margin: 5px 0 5px 0;
+}
+
+.home-page .me .info .item{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    height: 32px;
+    margin: 8px 0 8px 0;
+    font-size: 13px;
+    font-weight: 550;
+    color: black;
+}
+
+.home-page .me .info .item img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.home-page .aboutme {
+    width: 415px;
+}
+
+.home-page .aboutme  h2 {
+    margin: 10px 0 10px 0;
+}
+
+.home-page .aboutme .aboutme-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 16px;
+    max-height: 360px;
+}
+
+.home-page .aboutme .aboutme-text .paragraph {
+    margin-bottom: 15px;
+}
+
+.home-page .aboutme .aboutme-text ul {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+/* Footer */
+.social-media {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    height: 85px;
+    border-radius: 45px 45px 0 0;
+    background-color: rgba(10, 20, 16, 0.4);
+    cursor: pointer;
+}
+
+.social-media .begin {
+    margin-left: 7px;
+}
+
+.social-media .end {
+    margin-right: 7px;
+}
+
+.social-media a:hover a,
+.social-media a:hover img {
+    animation: jump 1.7s infinite;
+}
+
+@keyframes jump {
+    100% {
+        transform: translateY(0) scale(1);
+        -webkit-transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-5px) scale(1.02);
+        -webkit-transform: translateY(-5px) scale(1.02);
+    }
+}
